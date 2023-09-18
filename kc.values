@@ -681,14 +681,14 @@ networkPolicy:
 serviceAccount:
   ## @param serviceAccount.create Enable the creation of a ServiceAccount for Keycloak pods
   ##
-  create: true
+  create: false
   ## @param serviceAccount.name Name of the created ServiceAccount
   ## If not set and create is true, a name is generated using the fullname template
   ##
-  name: ""
+  name: "keycloak-svc-account"
   ## @param serviceAccount.automountServiceAccountToken Auto-mount the service account token in the pod
   ##
-  automountServiceAccountToken: true
+  automountServiceAccountToken: false
   ## @param serviceAccount.annotations Additional custom annotations for the ServiceAccount
   ##
   annotations: {}
