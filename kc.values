@@ -121,13 +121,13 @@ auth:
   adminUser: admin
   ## @param auth.adminPassword Keycloak administrator password for the new user
   ##
-  adminPassword: "admin"
+  adminPassword: ""
   ## @param auth.existingSecret Existing secret containing Keycloak admin password
   ##
-  existingSecret: ""
+  existingSecret: "keycloak"
   ## @param auth.passwordSecretKey Key where the Keycloak admin password is being stored inside the existing secret.
   ##
-  passwordSecretKey: ""
+  passwordSecretKey: "admin-password"
 
 ## HTTPS settings
 ## ref: https://github.com/bitnami/containers/tree/main/bitnami/keycloak#tls-encryption
@@ -1023,11 +1023,11 @@ keycloakConfigCli:
 postgresql:
   enabled: true
   auth:
-    postgresPassword: "nnamdi"
+    postgresPassword: ""
     username: bn_keycloak
-    password: "nnamdi"
+    password: ""
     database: bitnami_keycloak
-    existingSecret: ""
+    existingSecret: "postgres"
   architecture: standalone
 ## External PostgreSQL configuration
 ## All of these values are only used when postgresql.enabled is set to false
